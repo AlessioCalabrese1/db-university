@@ -72,3 +72,5 @@ ON `courses`.`id` = `course_teacher`.`course_id`
 JOIN `teachers`
 ON `course_teacher`.`teacher_id` = `teachers`.`id`
 WHERE `departments`.`name` = "Dipartimento di Matematica"
+GROUP BY `course_teacher`.`teacher_id`
+ORDER BY `teachers`.`name` ASC, `teachers`.`surname` ASC
